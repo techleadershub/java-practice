@@ -27,11 +27,18 @@ public class Person {
 		this.age = age;
 	}
 
-//uncomment method below
-//	@Override
-//	public boolean equals(Object person) {
-//		Person per = (Person) person;
-//		return per.getAge() == this.age && per.getName().equals(this.name);
-//	}
+	// uncomment method below
+	@Override
+	public boolean equals(Object person) {
+		Person per = (Person) person;
+		return per.getAge() == this.age && per.getName().equals(this.name);
+	}
+
+	//this is necessary for maintaining uniqueness for HashSet, HashMap
+	//java will check both equals method and hashCode before declaring as duplicate
+	@Override
+	public int hashCode() {
+		return name.hashCode() + age;
+	}
 
 }
