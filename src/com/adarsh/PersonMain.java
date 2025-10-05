@@ -21,5 +21,15 @@ public class PersonMain {
 		
 		System.out.println(personSet.size()); // will size be 1 or 2?
 		
+		String str1 = "Adarsh";
+		String str2 = "Adarsh";
+		System.out.println(str1 == str2);
+		str2 = str2 + " G";
+		System.out.println(str1 == str2);
+		str1 = str1 + " G";
+		System.out.println(str1 == str2);	
+		System.out.println(str1.equals(str2));
+		System.out.println("str1="+ str1 + ", str2=" + str2);
+		
 	}
 }
